@@ -1,12 +1,34 @@
 import random
 import time
+import tkinter as tk
 
-print('wybierz liczbe od 0 do 10 ')
+window = tk.Tk()
+window.geometry('400x400')
+label = tk.Label(text='Wybierz liczbe od 0 do 10')
 time.sleep(5)
 
-modulo = input('Czy twoja liczba jest parzysta? : ')
+
+
+def newwindow():
+    newwindow = tk.Toplevel(window)
+    label = tk.Label(newwindow, text='Czy twoja liczba jest parzysta? ')
+    label.pack()
+    entry = tk.Entry(newwindow,width=40)
+    entry.pack()
+    button = tk.Button(command=secondwindow())
+    button.pack()
+def secondwindow():
+    secondwindow = tk.Toplevel(newwindow)
+    label = tk.Label(secondwindow,text='Czy twoja liczba jest większa od 5?')
+    label.pack()
+    entry1 = tk.Entry(secondwindow,width=40)
+    entry1.pack()
+    button1 = tk.Button(command=math)
+
+def math():
+
+
 modulo.lower()
-lower_higher = input('Czy twoja liczba jest większa od 5 ?: ')
 lower_higher.lower()
 
 while True:
@@ -33,4 +55,4 @@ while True:
 
 
 
-
+window.mainloop()

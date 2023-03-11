@@ -25,11 +25,13 @@ def secondwindow():
     entry1.pack()
     button1 = tk.Button(command=math)
 
-def math():
 
+modulo = 'tak'
+lower_higher = 'nie'
 
 modulo.lower()
 lower_higher.lower()
+
 
 while True:
     if modulo == 'tak':
